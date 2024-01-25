@@ -28,7 +28,7 @@ public class Snake {
         direction=Direction.Right;
         Node current=head;
         int size = 1;
-        while(size <3 &&current.next==null){
+        while(size <4 &&current.next==null){
             Node newNode= new Node(current.x-1,current.y);
             current.next=newNode;
             newNode.previous=current;

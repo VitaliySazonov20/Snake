@@ -18,16 +18,20 @@ public class GameKeyListener implements KeyListener {
         int keyCode = e.getKeyCode();
         switch (keyCode) {
             case KeyEvent.VK_UP:
-                snake.setDirection(Snake.Direction.Up);
+                if(snake.direction!=Snake.Direction.Down)
+                    snake.setDirection(Snake.Direction.Up);
                 break;
             case KeyEvent.VK_DOWN:
-                snake.setDirection(Snake.Direction.Down);
+                if(snake.direction!=Snake.Direction.Up)
+                    snake.setDirection(Snake.Direction.Down);
                 break;
             case KeyEvent.VK_LEFT:
-                snake.setDirection(Snake.Direction.Left);
+                if(snake.direction!=Snake.Direction.Right)
+                    snake.setDirection(Snake.Direction.Left);
                 break;
             case KeyEvent.VK_RIGHT:
-                snake.setDirection(Snake.Direction.Right);
+                if(snake.direction!=Snake.Direction.Left)
+                    snake.setDirection(Snake.Direction.Right);
                 break;
             // Handle any other keys if needed
         }
